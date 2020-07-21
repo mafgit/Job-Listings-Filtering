@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(180, 29%, 50%);
+    background-image: url("./images/bg-header-desktop.svg");
+    background-size: 100%;
+    background-position: bottom;
+}
+
+body {
+    background-color: hsl(180, 52%, 96%);
+}
+
+button, body {
+    font-family: Spartan, sans-serif;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 80px 0;
+}
+
+.job {
+    border-radius: 5px;
+    width: 70%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.details {
+    grid-column: 2/6;
+}
+
+.logodiv,.upper,.middle, .lower, .tags {
+    align-items: center;
+    display: flex;
+}
+
+.tags {
+    align-items: center;
+    justify-content: center;
+}
+
+.tag, .filter-tag {
+    color: hsl(180, 29%, 50%);
+    font-weight: 900;
+    background-color: hsl(180, 31%, 95%);
+    margin: 5px;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.filters p{
+    width: 80%;
+}
+.tag:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: #fff;
+}
+
+.lower p, .upper p {
+    color: rgb(95, 95, 95);
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.lower p {
+    margin: 0 15px 0 0;
+    font-weight: 700;
+}
+
+.new {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.featured {
+    background-color: #101010;
+    border: none;
+}
+
+.upper p {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #FFF;
+}
+
+.upper .company {
+    font-weight: 600;
+    color: hsl(180, 29%, 50%);
+    font-size: 14px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.position {
+    cursor: pointer;
+    font-size: 18px;
+}
+.position:hover {
+    color: hsl(180, 29%, 50%);
+}
+
+.job div {
+    margin: 10px;
+}
+
+.featuredJob {
+    border-left: 5px solid hsl(180, 29%, 50%);
+}
+
+.filters {
+    background-color: #fff;
+    width: 70%;
+    height: 80px;
+    top: 160px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.05);
+    align-items: center;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border-radius: 5px;
+}
+
+.filtertags {
+    display: flex;
+}
+
+.filter-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: auto;
+    font-size: 13px;
+}
+
+.filter-tag * {
+    margin: 3px;
+}
+
+.filter-tag button {
+    background-color: hsl(180, 29%, 50%);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.filter-tag button:hover {
+    background-color: #1c1c1c;
+}
+
+hr {
+    display: none;
+}
+
+.clear {
+    color: rgb(95, 95, 95);
+    background: none;
+
+}
+
+.filters .cleardiv {
+    grid-column: 11;
+}
+
+.clear:hover {
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
+}
+@media (max-width:1170px){
+    .job {
+        padding: 20px;
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 80px auto;
+        height: 270px;
+        
+    }
+
+    .details {
+        position: relative;
+        top: -70px;
+        grid-column: 1;
+    }
+    .tags {
+        position: relative;
+        top: -70px;
+        grid-column: 1;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .logodiv {
+        position: relative;
+        top: -70px;
+        left:10px;
+        position: relative;
+    }
+    .upper, .lower, .middle {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width:690px){
+    hr {
+        display: block;
+    }
+    .tags {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tag {
+        display: flex;
+        justify-content: center;
+    }
+
+    .job {
+        min-height: 330px;
+    }
+}
+
+@media (max-width:610px){
+    header {
+        background-image: url("./images/bg-header-mobile.svg");
+        background-position: bottom;
+    }
+    .logo {
+        width: 70px;
+    }
+    .job, .filters {
+        width: 90%;
+    }
+}
+
+@media (max-width:500px){
+    .job {
+        width: 95%;
+    }
+    .filters {
+        height: 150px;
+    }
+    .filtertags {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:350px){
+    .filters {
+        height: 180px;
+    }
+    .filtertags {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
